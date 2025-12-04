@@ -1,0 +1,14 @@
+[data-bs-theme="dark"] {
+  .btn {
+    --bs-btn-border-color: var(--bs-white);
+  }
+
+  .form-control {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .form-control::placeholder {
+    color: #000;
+  }
+}
