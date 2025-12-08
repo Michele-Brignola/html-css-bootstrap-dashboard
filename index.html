@@ -76,74 +76,118 @@
 
     <!-- Main -->
     <main>
-      <section class="container my-3">
-        <!-- Header Main -->
-        <div class="d-flex justify-content-between">
-          <h4>Catalogo Libri</h4>
-          <button class="btn btn-primary">Aggiungi Libro</button>
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <!-- Header Main -->
+            <div class="d-flex justify-content-between">
+              <h4>Catalogo Libri</h4>
+              <button class="btn btn-primary">Aggiungi Libro</button>
+            </div>
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-striped my-3">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-6">Titolo</th>
+                    <th scope="col" class="d-none d-md-table-cell">
+                      Data prestito
+                    </th>
+                    <th scope="col" class="col-2">Stato</th>
+                    <th scope="col" class="col-2 text-center">Azioni</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>I pilastri della terra</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td class="stato bg-success text-white rounded">
+                      Disponibile
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Le cronache di Narnia: il leone, la strega e l'armadio
+                    </td>
+                    <td class="d-none d-md-table-cell">25/07/2023</td>
+                    <td class="stato bg-warning text-white rounded">
+                      In prestito
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Il codice Da Vinci</td>
+                    <td class="d-none d-md-table-cell">-</td>
+                    <td class="stato bg-danger text-white rounded">
+                      non disponibile
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary">
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <!-- Todo Card -->
+            <div id="todo-card" class="card my-3">
+              <div class="card-header">
+                <h4>Todo</h4>
+              </div>
+              <div class="card m-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <input type="checkbox" id="my-toggle" />
+                    <span>Chiamare segreteria</span>
+                  </li>
+                  <li class="list-group-item">
+                    <input type="checkbox" id="my-toggle" />
+                    <span>Mandare avvisi prestiti scaduti</span>
+                  </li>
+                  <li class="list-group-item">
+                    <input type="checkbox" id="my-toggle" />
+                    <span>Ordinare nuovi libri</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- F.A.Q. Card -->
+            <div id="faq-card" class="card my-3">
+              <div class="card-header"><h4>F.A.Q.</h4></div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Come aggiungere un nuovo libro?</li>
+                <li class="list-group-item">
+                  Come posso accedere all'anagragica utenti?
+                </li>
+                <li class="list-group-item">
+                  Posso usare questa dashboard da mobile?
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- Table -->
-        <div class="table-responsive">
-          <table class="table table-striped my-3">
-            <thead>
-              <tr>
-                <th scope="col" class="col-6">Titolo</th>
-                <th scope="col" class="col-0 col-md-2">Data prestito</th>
-                <th scope="col" class="col-2">Stato</th>
-                <th scope="col" class="col-2 text-center">Azioni</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>I pilastri della terra</td>
-                <td>-</td>
-                <td>Disponibile</td>
-                <td>
-                  <button>edit</button>
-                  <button>delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
-                <td>25/07/2023</td>
-                <td>In prestito</td>
-                <td>
-                  <button>edit</button>
-                  <button>delete</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Main Card Section -->
-      <section class="container my-3">
-        <!-- Todo Card -->
-        <div id="todo-card" class="card my-3">
-          <div class="card-header"><h4>Todo</h4></div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Chiamare segreteria</li>
-            <li class="list-group-item">Mandare avvisi prestiti scaduto</li>
-            <li class="list-group-item">Ordinare nuovi libri</li>
-          </ul>
-        </div>
-        <!-- F.A.Q. Card -->
-        <div id="faq-card" class="card my-3">
-          <div class="card-header"><h4>F.A.Q.</h4></div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              Come aggiungere un nuovo libro?
-            </li>
-            <li class="list-group-item">
-              Come posso accedere all'anagragica utenti?
-            </li>
-            <li class="list-group-item">
-              Posso usare questa dashboard da mobile?
-            </li>
-          </ul>
-        </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>
